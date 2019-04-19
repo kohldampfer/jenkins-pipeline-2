@@ -2,6 +2,12 @@ pipeline {
 
 	agent any
 
+	properties ([
+		parameters([
+			string(name: 'VAR2', defaultValue: 'TESTING', description: '',)
+		])
+	])
+
 	stages {
 		stage('Build') {
 			steps {
